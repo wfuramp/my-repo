@@ -1,0 +1,16 @@
+bigquery:
+  input_tables:
+    raw: "your-project.your_dataset.raw_data"
+  intermediate_tables:
+    cleaned: "your-project.your_dataset.cleaned_data"
+    predictions: "your-project.your_dataset.predictions"
+  output_tables:
+    final_output: "your-project.your_dataset.final_output"
+
+storage:
+  model_path: "gs://your-bucket/models/lr_model"
+  log_path: "gs://your-bucket/logs/"
+
+pipeline:
+  retry_attempts: 3
+  retry_interval_seconds: 60
